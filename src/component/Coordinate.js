@@ -13,8 +13,9 @@ const Coordinate = (props) => {
       x: e.pageX - containerRef.current.getBoundingClientRect().left,
       y: e.pageY - containerRef.current.getBoundingClientRect().top,
     });
+    console.log("X="+ " "+coord.x,"Y ="+ " " +coord.y)
   };
-console.log("X="+ " "+coord.x,"Y ="+ " " +coord.y)
+     
   return (
     <>
       <div
