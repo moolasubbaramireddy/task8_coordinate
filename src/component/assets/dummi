@@ -1,0 +1,27 @@
+// import React ,{useState , useRef} from "react";
+// import logo from "./assets/bg2.jpg";
+
+// const Coordinate = () => {
+//   const coordRef = useRef();
+//   const [state, setState] = useState({X:0, Y:0});
+
+//   const mouseMove = (e) =>{
+//     setState({
+        
+//         x:e.clientX - coordRef.current.getboundingclientrect().X,
+//         Y:e.clientY - coordRef.current.getboundingclientrect().y
+//     })
+//     console.log(mouseMove,state.X="", state.Y="")
+//   }
+//   return (
+//     <div
+//       ref={coordRef}
+//       onMouseDown={mouseMove}
+//       style={{ cursor: "pointer", height: "500px", width: "500px" }}
+//     >
+//       <img src={logo} alt="img" height="500px" width="500px" />
+//     </div>
+//   );
+// };
+
+// export default Coordinate;
