@@ -2,10 +2,12 @@ import React ,{useState , useRef} from "react";
 import logo from './assets/bg2.jpg';
 import Card from "./Card";
 import Board from "./Board";
+import './Css.css';
 
 
-const Coordinate = (props) => {
+const Coordinate = () => {
     const containerRef = useRef();
+    const cardRef = useRef();
   const [coord, setCoord] = useState({ x: 0, y: 0 });
   const handleMouseMove = (e) => {
     //clientX, pageX, screenX, offsetX
@@ -18,6 +20,7 @@ const Coordinate = (props) => {
      
   return (
     <>
+    <Board id='board-1' className='board'>
       <div
         ref={containerRef}
         onMouseDown={handleMouseMove}
@@ -32,11 +35,18 @@ const Coordinate = (props) => {
         />
        
       </div>
-      <Board id='board-1' className='board'>
-        <Card id='card-1' className="card" graggable="true">
+      </Board>
+      
+        <Card ref={cardRef} left={coord.x} top={coord.y}  id='card-1' className="card" graggable="true">
           <p>m</p>
         </Card>
-       </Board>
+
+        <Card ref={cardRef} left={coord.x} top={coord.y} id='card-2' className="card" graggable="true">
+          <p>m</p>
+        </Card>
+       
+
+      
       
     </>
   );

@@ -5,10 +5,8 @@ const Board = (props) => {
     e.preventDefault();
     const card_id = e.dataTransfer.getData("card_id");
     const card = document.getElementById(card_id);
-    // if (typeof card === 'undefined' || !card) {
-    //     return;
-    //   }
-    // card.style.display='block';
+
+    card.style.position = 'absolute';
     e.traget.appendchild(card);
   };
   const dragOver = (e) => {

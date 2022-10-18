@@ -13,7 +13,7 @@ console.log(props)
     // },0)
   };
   const dragOver = (e) => {
-    e.stopPropagation();
+    e.preventDefault();
   };
   return (
     <div
